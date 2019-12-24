@@ -1,0 +1,12 @@
+.header {
+    text-align: center;
+    color:aqua;
+}
+.top {
+    background-color:#202225;
+    height: 48px;
+    width: 100%;
+}
+body {
+    background-color: #36393F;
+}
