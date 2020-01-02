@@ -1,28 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
-        <div class="top">
-            <img src="images/Logo.png" alt="logo">
-        </div>
-        <h1 class="header">noice</h1>
-        <table class="table" align="center">
-            <tr>
-                <td>ah tm</td>
-                <td><marquee>ah tm</marquee></td>
-                <td>ah tm</td>
-                <td>ah tm?</td>
-                <td>ah tm</td>
-            </tr>
-            <tr>
-                <td>ah tm</td>
-                <td>ah tm</td>
-                <td style="color:blueviolet">ah tm</td>
-                <td>ah tm</td>
-                <td>ah tm</td>
-            </tr>
-        </table>
+        <nav>
+            <ul class = "nlist" id="nlist">
+                <li class="logo"><img src="images/Logo.png" alt="logo"></li>
+                <li class="title">Hexo's Page</li>
+                <li class="nbutton"><a href="#projects">Projects</a></li>
+                <li class="nbutton"><a href="#artwork">Artwork</a href="#projects"></li>
+                <li class="nbutton"><a href="#services">Services</a></li>
+                <li class="nbutton"><a href="#contact">Contact</a href="#projects"></li>
+                <li class="nbutton"><a href="#story">Story</a></li>
+                <li class="drop"><img onclick="Drop()" src="images/Drop.png" alt="drop down"></li>
+            </ul>
+            <script>
+                var x = document.getElementById("nlist")
+                function Drop(){
+                    console.log(x.className)
+                    if (x.className === "nlist"){
+                        x.className = "ndlist"
+                    } else {
+                        x.className = "nlist"
+                    }
+                }
+            </script>
+        </nav>
     </body>
 </html>

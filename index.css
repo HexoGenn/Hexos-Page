@@ -1,12 +1,62 @@
-.header {
-    text-align: center;
-    color:aqua;
+.drop {
+    float: right;
+    display: none;
 }
-.top {
-    background-color:#202225;
-    height: 48px;
+.right, .left, .nbuttons { /*navbar divisions*/
+    display: inline-block;
+}
+nav ul, nav ul li {
+    vertical-align: middle;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+nav ul {
     width: 100%;
 }
+nav, nav ul li, .logo, .drop {
+    overflow: hidden;
+    height: 48px;
+}
+.nbutton, .title {
+    height: 24px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-size: 16px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+.title {
+    margin-right: 12px;
+    font-weight: bold;
+}
+nav {
+    background-color: darkgray;
+    width: 100%;
+    font-family: "Rubik";
+}
+.nbutton:hover, .drop:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
 body {
-    background-color: #36393F;
+    background-color: grey;
+    margin: 0;
+}
+.nbutton a {
+    text-decoration: none;
+}
+
+/* Mobile */
+
+@media screen and (max-width: 512px){
+    .nlist li {
+        display: none;
+    }
+    .drop, .logo {
+        display: inline;
+    }
+    .ndlist li {
+        display: block;
+        float:none;
+    }
 }
