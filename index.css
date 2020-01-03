@@ -1,62 +1,115 @@
-.drop {
-    float: right;
-    display: none;
+@import url("https://fonts.googleapis.com/css?family=Rubik&display=swap");
+
+body {
+    margin: 0;
+    background-color: snow;
 }
-.right, .left, .nbuttons { /*navbar divisions*/
-    display: inline-block;
-}
-nav ul, nav ul li {
-    vertical-align: middle;
-    display: inline-block;
+
+/* Navbar */
+
+nav *, nav {
     padding: 0;
     margin: 0;
-}
-nav ul {
-    width: 100%;
-}
-nav, nav ul li, .logo, .drop {
-    overflow: hidden;
     height: 48px;
+    font-family: rubik;
 }
-.nbutton, .title {
-    height: 24px;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    font-size: 16px;
+
+nav * {
+    overflow: hidden;
+}
+
+nav {
+    background-color: rgb(216, 213, 213);
+}
+
+.left {
+    width: 100%;
+    float: left;
+}
+
+.left * {
+    display: inline-block;
+    padding-top: 14px;
+    height: 34px;
+}
+
+.nbutton {
     padding-left: 2px;
     padding-right: 2px;
+    margin-right: 2px;
+    text-decoration: none;
+    color: inherit;
 }
+
+.nbutton:hover {
+    background-color: rgb(76, 138, 173);
+}
+
+.drop {
+    float: right;
+}
+
+nav * {
+    display: inline;
+    vertical-align: middle;
+}
+
+.left * {
+    text-align: center;
+}
+
 .title {
-    margin-right: 12px;
+    margin-right: 24px;
     font-weight: bold;
 }
-nav {
-    background-color: darkgray;
-    width: 100%;
-    font-family: "Rubik";
+
+.logo img, .drop img {
+    display: inline-block;
+    height: 48px; 
+    padding-top: 0px; 
 }
-.nbutton:hover, .drop:hover {
-    background-color: rgba(0, 0, 0, 0.1);
+
+.logo, .drop {
+    height: 48px; 
+    display: inline-block;
+    padding-top: 0px; 
 }
-body {
-    background-color: grey;
-    margin: 0;
-}
-.nbutton a {
-    text-decoration: none;
+
+.drop {
+    display: none;
 }
 
 /* Mobile */
-
 @media screen and (max-width: 512px){
-    .nlist li {
+    .nbutton, .title {
         display: none;
     }
-    .drop, .logo {
-        display: inline;
+    .logo img, .drop img, .mnavbar .left .nbutton {
+        background-color: rgb(216, 213, 213);;
+        border-radius: 4px;
     }
-    .ndlist li {
+    nav {
+        background-color: transparent;
+    }
+    .mnavbar .left .nbutton, .mnavbar .left {
         display: block;
-        float:none;
+        width: 128px;
+        overflow: inherit;
+    }
+    .mnavbar .left {
+        width: 100%;
+    }
+    .drop {
+        display: inline-block;
+    }
+    .mnavbar .left .nbutton {
+        margin-top: 4px;
+        width: 95%;
+        margin: 0;
+        margin-top: 4px;
+        margin-left: 2.5%;
+        padding-left: 0;
+        padding-right: 0;
+        float: none;
     }
 }

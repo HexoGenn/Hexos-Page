@@ -5,28 +5,38 @@
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
-        <nav>
-            <ul class = "nlist" id="nlist">
-                <li class="logo"><img src="images/Logo.png" alt="logo"></li>
-                <li class="title">Hexo's Page</li>
-                <li class="nbutton"><a href="#projects">Projects</a></li>
-                <li class="nbutton"><a href="#artwork">Artwork</a href="#projects"></li>
-                <li class="nbutton"><a href="#services">Services</a></li>
-                <li class="nbutton"><a href="#contact">Contact</a href="#projects"></li>
-                <li class="nbutton"><a href="#story">Story</a></li>
-                <li class="drop"><img onclick="Drop()" src="images/Drop.png" alt="drop down"></li>
-            </ul>
-            <script>
-                var x = document.getElementById("nlist")
-                function Drop(){
-                    console.log(x.className)
-                    if (x.className === "nlist"){
-                        x.className = "ndlist"
-                    } else {
-                        x.className = "nlist"
-                    }
-                }
-            </script>
+
+        <!--navigation bar-->
+        <nav class="navbar" id="navbar">
+            <div class="left">
+                <div class="logo"><img src="images/Logo.png" alt="logo"></div>
+                <div class="title">Hexo's Page</div>
+                <div class="drop"><img onclick="Drop()" src="images/Drop.png" alt="drop down"></div>
+                <a class="nbutton" href="#projects">Projects</a>
+                <a class="nbutton" href="#artwork">Artwork</a href="#projects">
+                <a class="nbutton" href="#services">Services</a class="nbutton">
+                <a class="nbutton" href="#contact">Contact</a href="#projects">
+                <a class="nbutton" href="#story">Story</a class="nbutton">
+            </div>
         </nav>
+        
+        <!--content-->
+        <div class="container">
+            
+        </div>
+
+        <!--scripting-->
+        <script>
+            var x = document.getElementById("navbar")
+            function Drop(){
+                console.log(x.className)
+                if (x.className === "navbar"){
+                    x.className = "mnavbar"
+                } else {
+                    x.className = "navbar"
+                }
+            }
+        </script>
+
     </body>
 </html>
