@@ -3,6 +3,70 @@
 body {
     margin: 0;
     background-color: snow;
+    font-family: rubik;
+}
+
+.container * {
+    display: block;
+}
+
+.header {
+    width: 100%;
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    width: 100%;
+}
+
+.row::after {
+    display: block;
+    clear: both;
+    content: "";
+}
+
+.col-1 {width:8.33%}
+.col-2 {width:16.66%}
+.col-3 {width:25%}
+.col-4 {width:33.33%}
+.col-5 {width:41.66%}
+.col-6 {width:50%}
+.col-7 {width:58.33%}
+.col-8 {width:68.66%}
+.col-9 {width:75%}
+.col-10 {width:83.33%}
+.col-11 {width:91.66%}
+.col-12 {width:100%}
+
+.container * {
+    box-sizing: border-box;
+}
+
+[class*="col-"]{
+    border: 2px solid red;
+    padding: 15px;
+}
+
+/* Footer */
+
+.mrfooter {
+   margin-left: 8px;
+   margin-right: 8px;
+   font-size: 12px;
+   font-weight: bold;
+}
+
+.space {
+    margin-top: 1024px;
+}
+
+.fbuttons * {
+    display: inline;
+}
+
+.fmsg, .fbuttons {
+    display: block;
 }
 
 /* Navbar */
@@ -10,8 +74,7 @@ body {
 nav *, nav {
     padding: 0;
     margin: 0;
-    height: 48px;
-    font-family: rubik;
+    z-index: 2;
 }
 
 nav * {
@@ -19,6 +82,8 @@ nav * {
 }
 
 nav {
+    overflow-y: visible;
+    height: 48px;
     background-color: rgb(216, 213, 213);
 }
 
@@ -80,13 +145,22 @@ nav * {
 }
 
 /* Mobile */
-@media screen and (max-width: 512px){
+@media screen and (max-aspect-ratio: 1/1){
     .nbutton, .title {
         display: none;
     }
     .logo img, .drop img, .mnavbar .left .nbutton {
         background-color: rgb(216, 213, 213);;
         border-radius: 4px;
+    }
+    .logo img, .drop img, .logo, .drop, .nbutton {
+        height: 48px;
+        font-weight: bold;
+        font-size: 24px;
+    }
+    .nbutton {
+        padding-top: 10px;
+        height: 38px;
     }
     nav {
         background-color: transparent;
